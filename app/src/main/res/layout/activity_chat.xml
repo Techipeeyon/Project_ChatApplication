@@ -6,40 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".Chat">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:elevation="5dp" />
 
     <TextView
-    android:id="@+id/tvSignup"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="30dp"
-    android:elevation="10dp"
-    android:text="Chat"
-    android:textColor="@color/colorPrimaryDark"
-    android:textSize="25sp"
-    android:textStyle="bold"
-    android:transitionName="tvLogin" />
-    <Button
-    android:id="@+id/profileButton"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bg_ui"
-    android:text="PROFILE" android:layout_marginTop="625dp"
-    android:textAllCaps="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-    android:textColor="@color/colorWhite" />
-
-    <Button
-        android:id="@+id/logoutbutton"
-        android:layout_width="match_parent"
+        android:id="@+id/tvSignup"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_ui"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="LOGOUT" android:layout_marginTop="680dp"
-        android:textAllCaps="true"
-        android:textColor="@color/colorWhite" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:elevation="10dp"
+        android:text="Chat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:transitionName="tvLogin" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bgHeader"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/rlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp">
+
+            <Button
+                android:id="@+id/profileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="625dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_ui"
+                android:text="PROFILE"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/logoutbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_ui"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="200dp"
+                android:text="LOGOUT" android:layout_marginTop="680dp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
 
 
 </RelativeLayout>
