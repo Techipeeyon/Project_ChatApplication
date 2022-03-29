@@ -20,13 +20,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class PersonalDetails extends AppCompatActivity {
-    private EditText Name_ET, AboutET, PhonenoET;
+    private EditText Name_ET, AboutET, PhonenoET, DoBET;
     private Button createButton;
     private FirebaseAuth mAuth;
     private DatabaseReference usersRef;
     private String uid;
 
-    String name, about, phoneno;
+    String name, about, phoneno, DoB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +38,15 @@ public class PersonalDetails extends AppCompatActivity {
         Name_ET = findViewById(R.id.name);
         AboutET = findViewById(R.id.about);
         PhonenoET = findViewById(R.id.phoneno);
+        DoBET = findViewById(R.id.DoB);
         createButton = findViewById(R.id.createButton);
 
         createButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 name = Name_ET.getText().toString();
-                about = Name_ET.getText().toString();
-                phoneno = Name_ET.getText().toString();
+                about = AboutET.getText().toString();
+                phoneno = PhonenoET.getText().toString();
+                DoB = DoBET.getText().toString();
 
                 if(TextUtils.isEmpty(name) || TextUtils.isEmpty(about) || TextUtils.isEmpty(phoneno))
                 {
@@ -60,6 +62,8 @@ public class PersonalDetails extends AppCompatActivity {
                     result.put("Name",name);
                     result.put("About",about);
                     result.put("PhoneNo",phoneno);
+                    result.put("DoB",DoB);
+
 
                     usersRef.child(uid).updateChildren(result).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -67,7 +71,7 @@ public class PersonalDetails extends AppCompatActivity {
                             if (task.isSuccessful())
                             {
                                 Toast.makeText(PersonalDetails.this, "Wow! We are so close now", Toast.LENGTH_SHORT).show();
-                                Intent mainIntent = new Intent(PersonalDetails.this, MainActivity.class);
+                                Intent mainIntent = new Intent(PersonalDetails.this, Login.class);
                                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(mainIntent);
                             }

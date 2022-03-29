@@ -85,7 +85,7 @@ public class Login extends AppCompatActivity {
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                                 if (snapshot.exists())
                                                 {
-                                                    Intent mainIntent = new Intent(Login.this, MainActivity.class);
+                                                    Intent mainIntent = new Intent(Login.this, Chat.class);
                                                     mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                     startActivity(mainIntent);
                                                 } else {
