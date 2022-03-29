@@ -126,7 +126,7 @@
 
 
                 <Button
-                    android:id="@+id/signupButton"
+                    android:id="@+id/createButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_ui"
