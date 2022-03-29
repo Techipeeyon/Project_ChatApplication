@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/bg_ui.xml" value="0.2445" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.2445" />
         <entry key="app/src/main/res/drawable/circletransparant.xml" value="0.2445" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.17325227963525835" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_personal_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
