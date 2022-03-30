@@ -51,16 +51,7 @@
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite" />
 
-            <Button
-                android:id="@+id/logoutbutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_ui"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="200dp"
-                android:text="LOGOUT" android:layout_marginTop="680dp"
-                android:textAllCaps="true"
-                android:textColor="@color/colorWhite" />
+
         </RelativeLayout>
 
     </ScrollView>

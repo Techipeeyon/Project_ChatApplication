@@ -3,7 +3,10 @@ package com.example.project_chatapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,6 +21,7 @@ public class Profile extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private TextView Name, About, phoneno, DoB;
     private DatabaseReference userref;
+    private Button logoutbutton;
     String email;
     String currentUserID;
 
@@ -33,8 +37,19 @@ public class Profile extends AppCompatActivity {
         About = findViewById(R.id.about);
         phoneno = findViewById(R.id.phoneno);
         DoB = findViewById(R.id.DoB);
+        logoutbutton = findViewById(R.id.logoutbutton);
 
         mAuth = FirebaseAuth.getInstance();
+
+        logoutbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                finish();
+                Intent mainIntent = new Intent(Profile.this,Login.class);
+                startActivity(mainIntent);
+            }
+        });
         email = getIntent().getStringExtra("email");
         currentUserID = mAuth.getCurrentUser().getUid();
         userref = FirebaseDatabase.getInstance().getReference("Users").child(currentUserID);
@@ -52,6 +67,7 @@ public class Profile extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
 
             }
         });

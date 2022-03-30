@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Chat<mAuth> extends AppCompatActivity {
-    private Button profileButton, logoutbutton;
+    private Button profileButton;
     private FirebaseAuth mAuth;
 
     @Override
@@ -21,7 +21,6 @@ public class Chat<mAuth> extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         profileButton = findViewById(R.id.profileButton);
-        logoutbutton = findViewById(R.id.logoutbutton);
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,14 +29,6 @@ public class Chat<mAuth> extends AppCompatActivity {
                 startActivity(mainIntent);
             }
         });
-        logoutbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mAuth.signOut();
-                finish();
-                Intent mainIntent = new Intent(Chat.this,Login.class);
-                startActivity(mainIntent);
-            }
-        });
+
     }
 }
