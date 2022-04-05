@@ -48,7 +48,7 @@ public class PersonalDetails extends AppCompatActivity {
                 phoneno = PhonenoET.getText().toString();
                 DoB = DoBET.getText().toString();
 
-                if(TextUtils.isEmpty(name) || TextUtils.isEmpty(about) || TextUtils.isEmpty(phoneno))
+                if(TextUtils.isEmpty(name) || TextUtils.isEmpty(about) || TextUtils.isEmpty(phoneno) || TextUtils.isEmpty(DoB))
                 {
                     Toast.makeText(PersonalDetails.this,"All the fields are mandatory",Toast.LENGTH_SHORT).show();
                     return;

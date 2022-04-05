@@ -82,7 +82,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv"
                 android:layout_width="match_parent"
-                android:layout_height="310dp"
+                android:layout_height="400dp"
                 android:layout_margin="20dp"
                 app:cardBackgroundColor="@color/colorWhite"
                 app:cardCornerRadius="20dp"
@@ -91,9 +91,9 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="400dp"
                     android:orientation="vertical"
-                    android:paddingBottom="50dp">
+                    android:paddingBottom="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -105,13 +105,13 @@
                         android:textStyle="bold" />
 
 
-                    <TextView
+                    <EditText
                         android:id="@+id/namePro"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="NAME"
+                        android:text="Pranavan VM"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -126,13 +126,13 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/aboutPro"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="NAME"
+                        android:text="Allways chill and enjoy"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -146,17 +146,40 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/phonenoPro"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="PHONE NUMBER"
+                        android:text="9080113187"
+                        android:inputType="number"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Date of Birth"
+                        android:textAllCaps="true"
+
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
+                    <EditText
+                        android:id="@+id/DoBPro"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="30/05/2002"
+                        android:textAllCaps="true"
+                        android:inputType="date"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -166,12 +189,26 @@
                 android:id="@+id/logoutbutton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="430dp"
+                android:layout_marginRight="50dp"
                 android:background="@drawable/bg_ui"
                 android:drawablePadding="5dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="350dp"
                 android:text="LOGOUT"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/saveChangesbutton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="500dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/bg_ui"
+                android:drawablePadding="5dp"
+                android:text="save changes"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="18sp" />

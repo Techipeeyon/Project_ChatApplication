@@ -92,7 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="50dp">
+                    android:paddingBottom="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -107,6 +107,7 @@
                         android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Pranavan VM"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:inputType="textEmailAddress" />
@@ -126,6 +127,7 @@
                         android:id="@+id/about"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Always chill and enjoy"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:inputType="text" />
@@ -143,6 +145,7 @@
                         android:id="@+id/phoneno"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="9080113187"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:inputType="number" />
@@ -160,6 +163,7 @@
                         android:id="@+id/DoB"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="30/05/2002"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:inputType="date" />

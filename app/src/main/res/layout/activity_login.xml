@@ -77,11 +77,11 @@
                 android:id="@+id/cv"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@color/colorWhite"
                 android:layout_margin="20dp"
-                app:cardElevation="4dp">
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -93,8 +93,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Email"
                         android:padding="5dp"
+                        android:text="Email"
                         android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -105,18 +105,18 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:textSize="18sp"
+                        android:inputType="text"
                         android:textColor="@color/colorPrimaryDark"
-                        android:inputType="text" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:padding="5dp"
                         android:text="Password"
                         android:textColor="#000000"
                         android:textSize="20sp"
-                        android:padding="5dp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -131,6 +131,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -153,7 +154,10 @@
                     android:textAllCaps="true"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp" />
+
+
             </RelativeLayout>
+
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -181,7 +185,7 @@
                 android:layout_marginTop="10dp"
                 android:elevation="5dp"
                 android:text="Forgot your password?"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorBlue"
                 android:textSize="18sp" />
 
 
