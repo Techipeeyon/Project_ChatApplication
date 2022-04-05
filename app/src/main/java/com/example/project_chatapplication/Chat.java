@@ -18,8 +18,6 @@ public class Chat<mAuth> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        mAuth = FirebaseAuth.getInstance();
-
         profileButton = findViewById(R.id.profileButton);
 
         profileButton.setOnClickListener(new View.OnClickListener() {
